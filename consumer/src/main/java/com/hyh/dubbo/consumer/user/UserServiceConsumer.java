@@ -16,10 +16,10 @@ public class UserServiceConsumer {
     public static void main(String args[]) {
         ApplicationContext ctx = new ClassPathXmlApplicationContext("applicationContext.xml");
         int i = 0;
-        while (i++ < 5)
+        while (i++ < 100)
         {
             IUserService userService = (IUserService) ctx.getBean("userService");
-            logger.info("执行结果：" + userService.login("hello world","hello"));
+//            logger.info("执行结果：" + userService.login("hello world","hello"));
             logger.info("执行结果：" + userService.login("hello world"));
         }
     }

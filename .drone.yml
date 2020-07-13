@@ -1,0 +1,10 @@
+kind: pipeline
+type: docker
+name: default
+
+steps:
+  - name: Maven编译
+    image: maven
+    volumes:
+    commands:
+      - mvn clean install
